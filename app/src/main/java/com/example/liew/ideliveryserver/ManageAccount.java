@@ -99,7 +99,7 @@ public class ManageAccount extends AppCompatActivity {
             protected void onBindViewHolder(@NonNull UserViewHolder viewHolder, final int position, @NonNull final User model) {
                 viewHolder.staffName.setText(model.getPhone());
                 viewHolder.staffPassword.setText(model.getName());
-                viewHolder.staffRole.setText(Common.convertRole(model.getIsstaff()));
+                viewHolder.staffRole.setText(Common.convertRole(String.valueOf(model.getIsstaff())));
 
                 //new event
                 viewHolder.btnEditAccount.setOnClickListener(new View.OnClickListener() {

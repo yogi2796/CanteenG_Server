@@ -52,6 +52,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent signInAsAdmin = new Intent(MainActivity.this, SignInAsAdmin.class);
                 startActivity(signInAsAdmin);
+
             }
         });
     }

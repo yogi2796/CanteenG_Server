@@ -76,6 +76,20 @@ public class SignInAsStaff extends AppCompatActivity {
         mDialog.setMessage("Please waiting...");
         mDialog.show();
 
+
+        User user = new User(phone,password);
+
+        users.child("users").child(phone).setValue(user);
+
+
+    }
+
+  /*  private void signInUser(String phone, String password) {
+
+        final ProgressDialog mDialog = new ProgressDialog(SignInAsStaff.this);
+        mDialog.setMessage("Please waiting...");
+        mDialog.show();
+
         final String localPhone = phone;
         final String localPassword = password;
 
@@ -115,5 +129,5 @@ public class SignInAsStaff extends AppCompatActivity {
 
             }
         });
-    }
+    }*/
 }
